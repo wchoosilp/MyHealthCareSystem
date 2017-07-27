@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="edu.aamu.myhealthcaresystem.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:background="#cbe5fb" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_gravity="center_horizontal|bottom" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="466dp"
+        android:layout_gravity="center_horizontal|top"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="right"
+            android:background="@drawable/nsf_logo2"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smart Health Care Adviser is the application that will help you to monitor and analyze your blood pressure, body mass index, and heart risk."
+            android:id="@+id/textView7"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.41"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:id="@+id/bLogout"
+        android:layout_alignParentBottom="true"
+        android:width="180dp"
+        android:background="#ab0202"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+</FrameLayout>

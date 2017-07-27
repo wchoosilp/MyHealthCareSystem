@@ -1,0 +1,514 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardiacFragment"
+    android:background="#cbe5fb">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Risk Calculator"
+                android:id="@+id/tvHeartRiskCalculator"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rgCardiacGender" >
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:id="@+id/tvCardiacGender"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/rbCardiacMale"
+                    android:checked="true"
+                    android:layout_weight="0.62"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/rbCardiacFemale"
+                    android:checked="false"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.39"
+                    android:layout_marginRight="10dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Age:"
+                android:id="@+id/tvAge"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacAge"
+                android:layout_weight="1"
+                android:layout_marginRight="35dp"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="20 - 90"
+                android:layout_gravity="center_vertical"
+                android:maxLength="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="1" >
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Year:"
+                android:id="@+id/tvCardiacYear"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacYear"
+                android:layout_weight="1"
+                android:layout_marginRight="35dp"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="2 - 10"
+                android:layout_gravity="center_vertical"
+                android:maxLength="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Total Cholesterol (mg/dL)"
+                android:id="@+id/tvTotalCholesteral"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacTotalCholesterol"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="2 - 12"
+                android:layout_gravity="center_vertical"
+                android:maxLength="2" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgBtnCardiacTotalCholesterolHelp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/help" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="HDL Cholesterol (mg/dL)"
+                android:id="@+id/tvHDLCholesterol"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacHDLCholesterol"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="0.3 - 5"
+                android:layout_gravity="center_vertical"
+                android:maxLength="2" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgBtnCardiacHDLCholesterolHelp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/help" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Systolic Pressure:"
+                android:id="@+id/tvSystolic"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacSystolicPressure"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="80 - 250"
+                android:layout_gravity="center_vertical"
+                android:maxLength="3" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgBtnCardiacSystolicHelp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/help" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <TextView
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:text="Diastolic Pressure:"
+                android:id="@+id/tvDiastolic"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacDiastolicPressure"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:enabled="true"
+                android:inputType="number"
+                android:background="@drawable/back"
+                android:hint="30 - 160"
+                android:layout_gravity="center_vertical"
+                android:maxLength="3" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imgBtnCardiacDiastolicHelp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/help" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rgCardiacBP" >
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Taking any blood pressure medicine?"
+                    android:id="@+id/tvCardiacBP"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/rbCardiacBPYes"
+                    android:checked="false"
+                    android:layout_weight="0.62"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/rbCardiacBPNo"
+                    android:checked="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.39"
+                    android:layout_marginRight="10dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rgCardiacDiabetes" >
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Diabetes:"
+                    android:id="@+id/tvCardiacDiabetes"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/rbCaridacDiabetesYes"
+                    android:checked="false"
+                    android:layout_weight="0.62"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/rbCardiacDiabetesNo"
+                    android:checked="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.39"
+                    android:layout_marginRight="10dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" >
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/rgCardiacSmoker" >
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="Smoker:"
+                    android:id="@+id/tvCaridacSmoker"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/rbCardiacSmokerYes"
+                    android:checked="false"
+                    android:layout_weight="0.62"
+                    android:layout_gravity="center_vertical" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/rbCaridacSmokerNo"
+                    android:checked="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.39"
+                    android:layout_marginRight="10dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="1" >
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" >
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="Calculate Heart Risk"
+                android:id="@+id/btnCardiacCalculate"
+                android:background="#ab0202"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:id="@+id/btnCardiacReset"
+                android:background="#ab0202"
+                android:textColor="#ffffff"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/editText12"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heart Risk Result:"
+                android:id="@+id/tvCardiacHeartRiskResult"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCardiacResult"
+                android:layout_weight="0.10"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:id="@+id/tvCardiacPercent"
+                android:layout_weight="0.01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:id="@+id/tvCardiacResult"
+                android:background="#dcdada"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

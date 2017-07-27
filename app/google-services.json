@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "665644732134",
+    "project_id": "smart-health-care-advisor"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665644732134:android:792dae9b30e5a2e6",
+        "android_client_info": {
+          "package_name": "edu.aamu.myhealthcaresystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC52H7WcQuDjTWWrGTvX2s1JCSu9ozE_a0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-84004135-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    android:id="@+id/noninToolBar"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:weightSum="1"
+    android:background="@android:color/holo_blue_bright">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Nonin Wrist Ox2 Device"
+        android:textSize="15dp"
+        android:id="@+id/tvNoninToolbarTitle"
+        android:textColor="#202020"
+        android:textAlignment="center"
+        android:onClick="onClick"
+        android:clickable="true" />
+</android.support.v7.widget.Toolbar>
